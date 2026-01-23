@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Maker - AI-Powered Resume Builder</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Resume Maker</h1>
+            <p class="subtitle">AI-Powered One-Page Resume Builder</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <h2>Step 1: Input Your LinkedIn Data</h2>
+                <div class="input-tabs">
+                    <button class="tab-btn active" data-tab="url">LinkedIn URL</button>
+                    <button class="tab-btn" data-tab="upload">Upload JSON</button>
+                    <button class="tab-btn" data-tab="manual">Manual Input</button>
+                </div>
+
+                <div class="tab-content active" id="url-tab">
+                    <label for="linkedin-url">LinkedIn Profile URL:</label>
+                    <input type="url" id="linkedin-url" placeholder="https://www.linkedin.com/in/your-profile/">
+                    <button id="fetch-linkedin" class="btn btn-primary">Fetch Profile</button>
+                    <p class="help-text">Note: If URL scraping fails due to permissions or LinkedIn restrictions, use the "Upload JSON" or "Manual Input" tabs instead.</p>
+                </div>
+
+                <div class="tab-content" id="upload-tab">
+                    <label for="json-upload">Upload LinkedIn Data Export (JSON):</label>
+                    <input type="file" id="json-upload" accept=".json">
+                    <p class="help-text">Export your LinkedIn data from Settings & Privacy → Data Privacy → Get a copy of your data</p>
+                </div>
+
+                <div class="tab-content" id="manual-tab">
+                    <label for="manual-input">Paste Your LinkedIn Profile (Text or JSON):</label>
+                    <textarea id="manual-input" rows="15" placeholder="You can paste your LinkedIn profile in any format:
+
+Option 1: Plain text from your LinkedIn profile
+Option 2: JSON format
+Option 3: Copy-paste directly from LinkedIn
+
+The software will automatically organize it for you!"></textarea>
+                    <button id="process-manual-input" class="btn btn-primary" style="margin-top: 10px;">Organize & Process</button>
+                    <p class="help-text">Just paste your LinkedIn profile text here - the software will automatically extract and organize your name, experience, education, skills, and more!</p>
+                </div>
+
+                <div id="linkedin-status" class="status-message"></div>
+            </div>
+
+            <div class="input-section" id="linkedin-preview-section" style="display: none;">
+                <h2>Fetched LinkedIn Data</h2>
+                <div id="linkedin-preview" class="linkedin-preview"></div>
+            </div>
+
+            <div class="input-section">
+                <h2>Step 2: Job Description</h2>
+                <label for="job-description">Paste the job description:</label>
+                <textarea id="job-description" rows="8" placeholder="Paste the complete job description here..."></textarea>
+            </div>
+
+            <div class="input-section">
+                <button id="generate-resume" class="btn btn-primary btn-large">Generate Resume</button>
+                <div id="generation-status" class="status-message"></div>
+            </div>
+
+            <div class="resume-section" id="resume-section" style="display: none;">
+                <div class="resume-header">
+                    <h2>Generated Resume</h2>
+                    <div class="page-indicator">
+                        <span id="page-length">1 page</span>
+                    </div>
+                    <div class="resume-actions">
+                        <button id="regenerate-btn" class="btn btn-secondary">Regenerate</button>
+                        <button id="export-pdf" class="btn btn-primary">Export PDF</button>
+                        <button id="export-docx" class="btn btn-primary">Export DOCX</button>
+                        <button id="export-txt" class="btn btn-primary">Export TXT</button>
+                    </div>
+                </div>
+                <div id="resume-preview" class="resume-preview"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/resume-generator.js"></script>
+    <script src="scripts/export.js"></script>
+</body>
+</html>

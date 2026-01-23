@@ -1,0 +1,13 @@
+{
+  "name": "resume-maker",
+  "version": "1.0.0",
+  "description": "AI-powered resume builder with LinkedIn integration",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js"
+  },
+  "keywords": ["resume", "linkedin", "ai", "ats"],
+  "author": "",
+  "license": "MIT"
+}
