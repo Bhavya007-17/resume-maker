@@ -1,5 +1,8 @@
 # Resume Maker
 
+![Language](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black) ![Node](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white) ![Ollama](https://img.shields.io/badge/LLM-Ollama-000000) ![License](https://img.shields.io/badge/License-MIT-green) ![Status](https://img.shields.io/badge/status-prototype-yellow)
+
+
 AI-powered resume builder that intelligently selects and formats content from your LinkedIn profile to create a one-page, ATS-optimized resume based on job descriptions.
 
 ## 🚀 Features
@@ -14,13 +17,6 @@ AI-powered resume builder that intelligently selects and formats content from yo
 - **Local Processing**: All data stays on your machine - privacy-focused
 - **Multiple Export Formats**: PDF, DOCX, and TXT
 
-## Features
-
-- **LinkedIn Integration**: Upload LinkedIn data via URL scraping, JSON export, or manual input
-- **AI-Powered Selection**: Intelligently selects most relevant content from your full LinkedIn profile
-- **One-Page Optimization**: Automatically fits content to exactly one page
-- **ATS-Friendly**: Optimized for Applicant Tracking Systems with keyword matching
-- **Local Processing**: All data stays on your machine - privacy-focused
 
 ## Setup
 
@@ -114,3 +110,14 @@ If helper scripts are blocked, use full paths directly or run:
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
+## Status
+
+Prototype — runs locally against a local Ollama model. Resume parsing/export work end-to-end.
+
+## License
+
+MIT — see the `LICENSE` file.
+
+## Contact
+
+Bhavya Dosi — [LinkedIn](https://www.linkedin.com/in/bhavya-dosi)
